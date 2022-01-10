@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Take-Home Front End Prompt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## NY Times News Reader
 
-## Available Scripts
+You will create a news reader application that pulls articles from the New York Times API Top Stories API.
 
-In the project directory, you can run:
+### Requirements:
 
-### `npm start`
+At a minimum, you must show:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- A list of articles
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- A “detailed” view for each article (as opposed to summary/list view)
 
-### `npm test`
+- Articles in the list must link to the detailed article view you create
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Some sort of search, filter, OR sort
 
-### `npm run build`
+Beyond the base requirements, include any additional elements you’d like, just be mindful of your time. You don’t need to go overboard, just consider what might be necessary to achieve MVP so that this news feed is easy-to-use, information is clear, and navigation is painless. Put yourself in a user’s shoes and think about what you would need (or want). The app should be usable on desktop, tablet, and mobile devices.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Things we’ll be looking for:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- A strong understanding of React JS and Front-End best practices
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Your ability to prioritize for MVP
 
-### `npm run eject`
+- An understanding of basic usability practices and standards
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- A clear hierarchy of information
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Clean, well thought out code
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Try to limit your total time to around __8 hours__ on this project. Prioritize what is important to get this feed working and as close to MVP as possible. Please do not attempt to recreate NYTimes.com. We’re interested in seeing your ability to write clean code to solve a problem with an understanding of basic UX. We’re not looking for fancy UI tricks or hacks.
