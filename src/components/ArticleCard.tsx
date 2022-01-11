@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { IArticle } from '../models/interfaces';
+import dayjs from 'dayjs';
 
 const ArticleCard = ({
   section, subsection, title, abstract, url, uri, byline, item_type,
@@ -7,17 +8,29 @@ const ArticleCard = ({
   des_facet, org_facet, per_facet, geo_facet, multimedia, short_url,
 }: IArticle) => {
 
+  const imageUrl = multimedia[0].url;
+
+  const formattedSection = subsection.length
+    ? `${section} / ${subsection}`
+    : section
+
+  const formattedPublishDate = dayjs(published_date).format('MM/DD/YYYY');
+
   return (
     <>
     { multimedia.length &&
       <article
         className='article-card__container'
         style={{
-          backgroundImage: `url(${multimedia[0].url})`
+          backgroundImage: `url(${imageUrl})`
         }}
       >
         <div className='article-card__text-overlay'>
-          <h1>overlay</h1>
+          <div className='article-card__text-overlay__tags'>
+            <h4>{ formattedSection }</h4>
+            <h4>{ formattedPublishDate }</h4>
+          </div>
+          <h3 className='article-card__article-title'>{ title }</h3>
         </div>
       </article>
     }
