@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 
 import { Context } from '../context/ContextProvider';
 import closeIcon from '../assets/img_143760.png';
+import arrowIcon from '../assets/arrow.png';
 
 ReactModal.setAppElement('#root');
 
@@ -37,11 +38,19 @@ const Detail = () => {
         >
           <img className='detail-container__modal__close-button__image' src={ closeIcon } />
         </button>
-        <h2 className='detail-container__modal__title' >{ selectedArticle.title }</h2>
+        <a href={ selectedArticle.short_url }>
+          <h2 className='detail-container__modal__title' >{ selectedArticle.title }</h2>
+        </a>
         <h4 className='detail-container__modal__byline'>{ selectedArticle.byline }</h4>
         <h5 className='detail-container__modal__dates'>Published { formattedPublishDate } • Updated { formattedUpdateDate }</h5>
         <p className='detail-container__modal__abstract'>{ selectedArticle.abstract }</p>
-        <img className='detail-container__modal__image' src={ selectedArticle.multimedia[0].url } />
+        <a href={ selectedArticle.short_url }>
+          <img className='detail-container__modal__image' src={ selectedArticle.multimedia[0].url } />
+        </a>
+        <a className='detail-container__modal__link' href={ selectedArticle.short_url }>
+          <img className='detail-container__modal__link__arrow-image' src={ arrowIcon } />
+          <p className='detail-container__modal__link__text'>Read this article on nytimes.com</p>
+        </a>
         </>
       }
     </ReactModal>
