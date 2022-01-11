@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
 
+import Gallery from './Gallery';
+
 const App = () => {
 
   return (
-    <h1>App</h1>
+    <main>
+      <Gallery />
+    </main>
   )
 }
 
