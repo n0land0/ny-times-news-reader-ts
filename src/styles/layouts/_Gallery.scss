@@ -1,0 +1,5 @@
+.gallery {
+  @include wh(100%, 80%);
+  @include flex-row();
+  @include center-xy();
+}
