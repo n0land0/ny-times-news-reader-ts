@@ -8,8 +8,6 @@ const ArticleCard = ({
   des_facet, org_facet, per_facet, geo_facet, multimedia, short_url,
 }: IArticle) => {
 
-  const imageUrl = multimedia[0].url;
-
   const formattedSection = subsection.length
     ? `${section} / ${subsection}`
     : section
@@ -18,11 +16,11 @@ const ArticleCard = ({
 
   return (
     <>
-    { multimedia.length &&
+    { multimedia &&
       <article
         className='article-card__container'
         style={{
-          backgroundImage: `url(${imageUrl})`
+          backgroundImage: `url(${multimedia[0].url})`
         }}
       >
         <div className='article-card__text-overlay'>
