@@ -11,7 +11,7 @@ const Gallery = () => {
   );
 
   return (
-    <section>
+    <section className='gallery'>
     { articleCards }
     </section>
   )

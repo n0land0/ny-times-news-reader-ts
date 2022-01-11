@@ -10,9 +10,15 @@ const ArticleCard = ({
   return (
     <>
     { multimedia.length &&
-      <article style={{
-        backgroundImage: `url(${multimedia[0].url})`
-      }}>
+      <article
+        className='article-card__container'
+        style={{
+          backgroundImage: `url(${multimedia[0].url})`
+        }}
+      >
+        <div className='article-card__text-overlay'>
+          <h1>overlay</h1>
+        </div>
       </article>
     }
     </>
