@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 
 import { Context } from '../context/ContextProvider';
 import ArticleCard from './ArticleCard';
+import Detail from './Detail';
 
 const Gallery = () => {
   const { displayList } = useContext(Context);
@@ -12,7 +13,8 @@ const Gallery = () => {
 
   return (
     <section className='gallery'>
-    { articleCards }
+      { articleCards }
+      <Detail />
     </section>
   )
 }
