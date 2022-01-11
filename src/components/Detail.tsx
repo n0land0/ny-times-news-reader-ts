@@ -3,6 +3,7 @@ import ReactModal from 'react-modal';
 import dayjs from 'dayjs';
 
 import { Context } from '../context/ContextProvider';
+import closeIcon from '../assets/img_143760.png';
 
 ReactModal.setAppElement('#root');
 
@@ -30,6 +31,12 @@ const Detail = () => {
     >
       { selectedArticle &&
         <>
+        <button
+          className='detail-container__modal__close-button'
+          onClick={ hideDetailView }
+        >
+          <img className='detail-container__modal__close-button__image' src={ closeIcon } />
+        </button>
         <h2 className='detail-container__modal__title' >{ selectedArticle.title }</h2>
         <h4 className='detail-container__modal__byline'>{ selectedArticle.byline }</h4>
         <h5 className='detail-container__modal__dates'>Published { formattedPublishDate } • Updated { formattedUpdateDate }</h5>

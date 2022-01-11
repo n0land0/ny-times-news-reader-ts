@@ -1,22 +1,72 @@
+.ReactModal__Content {
+  @include flex-column();
+  @include responsive('display', 'block', (
+    0px: 'flex',
+    385px: 'block'
+  ));
+  flex-direction: column;
+  @include responsive('justify-content', '', (
+    0px: 'space-around',
+    685px: ''
+  ));
+}
+
 .detail-container__modal__title {
-  font-size: 2.5rem;
+  @include responsive('font-size', 2.5rem, (
+    0px: 5em,
+    685px: 3.5em,
+    1000px: 3em,
+    1200px: 2.5rem
+  ));
 }
 
 .detail-container__modal__byline {
-  font-size: 2rem;
+  @include responsive('font-size', 2rem, (
+    0px: 4.5em,
+    685px: 3em,
+    1000px: 2.5em,
+    1200px: 2rem
+  ));
   margin: .5rem 0;
 }
 
 .detail-container__modal__dates {
   font-size: 1.5rem;
+  @include responsive('font-size', 1.5rem, (
+    0px: 4em,
+    685px: 3em,
+    1000px: 2.5em,
+    1200px: 1.5rem
+  ));
   margin: .5rem 0;
 }
 
 .detail-container__modal__abstract {
-  font-size: 1.5rem;
+  @include responsive('font-size', 1.5rem, (
+    0px: 4em,
+    685px: 3em,
+    1000px: 2.5em,
+    1200px: 1.5rem
+  ));
   margin: 1rem;
 }
 
 .detail-container__modal__image {
-  height: 32rem;
+  width: auto;
+  min-height: 32em;
+  @include responsive('max-height', auto, (
+    0px: 50%
+  ));
+}
+
+.detail-container__modal__close-button {
+  position: absolute;
+  right: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.detail-container__modal__close-button__image {
+  @include wh(2rem, 2rem);
 }
