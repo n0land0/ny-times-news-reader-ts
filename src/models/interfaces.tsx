@@ -2,6 +2,9 @@ export interface IContextValue {
   view: string;
   displayList: IArticle[];
   selectedArticle: IArticle | null;
+  modalIsOpen: boolean;
+  showDetailView: (event: React.MouseEvent, props: IArticle) => void;
+  hideDetailView: () => void;
 }
 
 interface IMultimedia {
