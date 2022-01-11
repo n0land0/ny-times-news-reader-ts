@@ -6,7 +6,10 @@ import { fetchHomeArticles } from '../apiCalls';
 export const Context = createContext<IContextValue>({
   view: 'home',
   displayList: [],
-  selectedArticle: null
+  selectedArticle: null,
+  modalIsOpen: false,
+  showDetailView: () => {},
+  hideDetailView: () => {}
 })
 
 // api returns an array of article objects (no id) from the specified section
@@ -20,10 +23,21 @@ const ContextProvider = ({ children }: React.PropsWithChildren<{}>) => {
   const [ view, setView ] = useState<string>('home');
   const [ displayList, setDisplayList ] = useState<IArticle[]>([]);
   const [ selectedArticle, setSelectedArticle ] = useState<IArticle | null>(null);
+  const [ modalIsOpen, setModalIsOpen ] = useState(false);
 
   const getHomeArticles = async () => {
     const homeArticles = await fetchHomeArticles();
     setDisplayList(homeArticles);
+  }
+
+  const showDetailView = (event: React.MouseEvent, props: IArticle) => {
+    setModalIsOpen(true);
+    setSelectedArticle(props);
+  }
+
+  const hideDetailView = () => {
+    setModalIsOpen(false);
+    setSelectedArticle(null);
   }
 
   useEffect(() => {
@@ -32,9 +46,10 @@ const ContextProvider = ({ children }: React.PropsWithChildren<{}>) => {
 
   return (
     <Context.Provider value={{
-      view, displayList, selectedArticle
+      view, displayList, selectedArticle, modalIsOpen,
+      showDetailView, hideDetailView
     }}>
-    { children }
+      { children }
     </Context.Provider>
   )
 }
