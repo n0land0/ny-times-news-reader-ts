@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
-import { ContextValue, Article } from '../models/interfaces';
+import { IContextValue, IArticle } from '../models/interfaces';
 
 import { fetchHomeArticles } from '../apiCalls';
 
-const Context = createContext({
-  // view: 'home'
+export const Context = createContext<IContextValue>({
+  view: 'home',
+  displayList: [],
+  selectedArticle: null
 })
 
 // api returns an array of article objects (no id) from the specified section
@@ -16,15 +18,12 @@ const Context = createContext({
 
 const ContextProvider = ({ children }: React.PropsWithChildren<{}>) => {
   const [ view, setView ] = useState<string>('home');
-  const [ displayList, setDisplayList ] = useState<Article[]>([]);
-  const [ selectedArticle, setSelectedArticle ] = useState<Article | null>(null);
+  const [ displayList, setDisplayList ] = useState<IArticle[]>([]);
+  const [ selectedArticle, setSelectedArticle ] = useState<IArticle | null>(null);
 
   const getHomeArticles = async () => {
     const homeArticles = await fetchHomeArticles();
-    // const { results } = homeArticles;
-    console.log(homeArticles)
-    // setDisplayList(results);
-    // console.log(displayList);
+    setDisplayList(homeArticles);
   }
 
   useEffect(() => {
@@ -33,7 +32,7 @@ const ContextProvider = ({ children }: React.PropsWithChildren<{}>) => {
 
   return (
     <Context.Provider value={{
-      view, selectedArticle
+      view, displayList, selectedArticle
     }}>
     { children }
     </Context.Provider>
