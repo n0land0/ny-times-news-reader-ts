@@ -1,9 +1,21 @@
-export interface ContextValue {
+export interface IContextValue {
   view: string;
-  selectedArticle: Article;
+  displayList: IArticle[];
+  selectedArticle: IArticle | null;
 }
 
-export interface Article {
+interface IMultimedia {
+  url: string;
+  format: string;
+  height: number,
+  width: number,
+  type: string,
+  subtype: string,
+  caption: string;
+  copyright: string;
+}
+
+export interface IArticle {
   section: string;
   subsection: string;
   title: string;
@@ -21,6 +33,6 @@ export interface Article {
   org_facet: string;
   per_facet: string;
   geo_facet: string;
-  multimedia: [];
+  multimedia: IMultimedia[];
   short_url: string;
 }
