@@ -1,17 +1,65 @@
 .article-card__container {
+  @include responsive('width', 25em, (
+    0px: 100em,
+    685px: 50em,
+    1000px: 33.33em,
+    1200px: 25em
+  ));
   @include wh(25em, 25em);
   overflow: scroll;
   background-size: cover;
-  &:hover .article-card__text-overlay {
-    display: flex;
-  }
+  @include responsive('background-position', top, (
+    0px: 25%,
+    800px: top
+  ));
 }
 
 .article-card__text-overlay {
   display: none;
-  flex-direction: column;
-  justify-content: center;
   height: 100%;
+  flex-direction: column;
+  @include center-xy();
+  text-align: center;
   backdrop-filter: brightness(0.5);
   transition: all 0.3s ease-in-out;
+}
+
+.article-card__article-title {
+  display: none;
+  padding: 1rem;
+  @include responsive('font-size', 2rem, (
+    0px: 5em,
+    685px: 3.5em,
+    1000px: 3em,
+    1200px: 2rem
+  ));
+  font-weight: bold;
+  color: white;
+}
+
+.article-card__text-overlay__tags {
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  top: 1rem;
+  text-align: center;
+  @include responsive('font-size', 1rem, (
+    0px: 4em,
+    685px: 2.75em,
+    1000px: 2em,
+    1200px: 1rem
+  ));
+  font-weight: bold;
+  color: white;
+  & h4 {
+    padding: 0 1rem;
+  }
+}
+
+.article-card__container:hover .article-card__text-overlay,
+.article-card__article-title,
+.article-card__text-overlay__tags {
+  display: flex;
 }
