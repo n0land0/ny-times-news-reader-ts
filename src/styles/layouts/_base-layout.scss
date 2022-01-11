@@ -1,0 +1,22 @@
+html {
+  // @include responsive('font-size', 1vw,(
+  //   375px: 10px,
+  //   800px: 11px
+  // ));
+  font-size: 1vw;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
