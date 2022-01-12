@@ -9,6 +9,17 @@ export const fetchHomeArticles = () => {
   .then(data => data.results)
 }
 
+export const fetchArticles = (sectionName: string) => {
+  return fetch(`https://api.nytimes.com/svc/topstories/v2/${sectionName}.json?api-key=${
+    process.env.REACT_APP_API_KEY
+  }`)
+  .then(response => {
+    checkResponse(response);
+    return response.json();
+  })
+  .then(data => data.results)
+}
+
 const checkResponse = (response: Response) => {
   if (!response.ok) {
     console.log(response)
