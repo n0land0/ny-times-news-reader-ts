@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import ReactModal from 'react-modal';
 import dayjs from 'dayjs';
 
-import { Context } from '../context/ContextProvider';
+import { Context } from '../context/Context';
 import closeIcon from '../assets/img_143760.png';
 import arrowIcon from '../assets/arrow.png';
 
