@@ -1,10 +1,17 @@
+import { Dispatch, SetStateAction } from 'react';
+
 export interface IContextValue {
   view: string;
+  setView: Dispatch<SetStateAction<string>>;
   displayList: IArticle[];
   selectedArticle: IArticle | null;
   modalIsOpen: boolean;
   showDetailView: (event: React.MouseEvent, props: IArticle) => void;
   hideDetailView: () => void;
+  filterTags: string[];
+  setFilterTags: Dispatch<SetStateAction<string[]>>;
+  addFilterTag: (tagToAdd: string) => void;
+  removeFilterTag: (tagToRemove: string) => void;
 }
 
 interface IMultimedia {
