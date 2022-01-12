@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { v4 as uuid } from 'uuid';
 
-import { Context } from '../context/ContextProvider';
+import { Context } from '../context/Context';
 import ArticleCard from './ArticleCard';
-import Detail from './Detail';
 
 const Gallery = () => {
   const { displayList } = useContext(Context);
@@ -14,7 +13,6 @@ const Gallery = () => {
   return (
     <section className='gallery'>
       { articleCards }
-      <Detail />
     </section>
   )
 }

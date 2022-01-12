@@ -1,3 +1,7 @@
+.ReactModal__Overlay {
+  z-index: 3;
+}
+
 .ReactModal__Content {
   @include flex-column();
   @include responsive('display', 'block', (

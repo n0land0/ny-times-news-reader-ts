@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import dayjs from 'dayjs';
 
-import { Context } from '../context/ContextProvider';
+import { Context } from '../context/Context';
 import { IArticle } from '../models/interfaces';
 
 const ArticleCard = ({

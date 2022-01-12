@@ -1,0 +1,24 @@
+header {
+  position: fixed;
+  top: 0;
+  @include responsive('height', 5rem, (
+    0px: 20rem,
+    685px: 9rem,
+    1000px: 6rem,
+    1200px: 5rem
+  ));
+  width: 100%;
+  @include flex-row();
+  @include center-xy();
+  background-color: white;
+  z-index: 2;
+}
+
+.header__page-title {
+  @include responsive('font-size', 3rem, (
+    0px: 8rem,
+    685px: 7rem,
+    1000px: 6rem,
+    1200px: 3rem
+  ));
+}
