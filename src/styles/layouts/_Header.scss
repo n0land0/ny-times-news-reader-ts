@@ -1,0 +1,13 @@
+header {
+  position: fixed;
+  top: 0;
+  @include wh(100%, 5rem);
+  @include flex-row();
+  @include center-xy();
+  background-color: white;
+  z-index: 2;
+}
+
+.header__page-title {
+  font-size: 3rem;
+}
