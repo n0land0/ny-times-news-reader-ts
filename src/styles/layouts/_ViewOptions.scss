@@ -1,4 +1,16 @@
 .view-options__dropdown {
   position: fixed;
-  right: 1rem;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 684px) {
+  .view-options__dropdown {
+    top: 14rem;
+  }
+}
+
+@media screen and (min-width: 685px) {
+  .view-options__dropdown {
+    right: 1rem;
+  }
 }
