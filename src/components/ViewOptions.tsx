@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext, ChangeEvent } from 'react';
 import { v4 as uuid } from 'uuid';
 
 import { Context } from '../context/Context';
@@ -20,7 +20,7 @@ const ViewOptions = () => {
     <select
       className='view-options__dropdown'
       value={ view }
-      onChange={ (event: any) => setView(event.target.value) }
+      onChange={ (event: ChangeEvent<HTMLSelectElement>) => setView(event.target.value) }
     >
       { sectionOptions }
     </select>

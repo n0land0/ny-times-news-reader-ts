@@ -1,4 +1,4 @@
-import { createContext, Dispatch, SetStateAction } from 'react';
+import { createContext } from 'react';
 
 import { IContextValue } from '../models/interfaces';
 
@@ -10,8 +10,4 @@ export const Context = createContext<IContextValue>({
   modalIsOpen: false,
   showDetailView: () => {},
   hideDetailView: () => {},
-  filterTags: [],
-  setFilterTags: () => {},
-  addFilterTag: () => {},
-  removeFilterTag: () => {},
-})
+});
