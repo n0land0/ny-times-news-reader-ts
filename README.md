@@ -33,6 +33,7 @@ Modal w/ detail view & link to NYT
 
 ## Challenges
 
+- Timing each step of my process, as a general workflow audit as well as a part of this challenge, impressed upon me the need to enforce timeboxing more strictly in some parts of my workflow
 - Sophisticated UI beyond basic usability was not a focus of this challenge, but in hindsight I wish I had taken the opportunity to try out a new UI component library, since the app is so simple.
 
 ## Viewing & Installation
