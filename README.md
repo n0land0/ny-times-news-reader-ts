@@ -1,38 +1,59 @@
 The deployed app can be viewed [here](https://ny-times-news-reader.surge.sh/).
 
-# Take-Home Front End Prompt
+## Abstract
 
-## NY Times News Reader
+This app was built as part of a [8-hour timed, practice take-home challenge](https://mod4.turing.edu/projects/take_home/take_home_fe) issued by [Turing School of Software & Design](https://turing.edu/), using the [NYT Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview). Users are greeted with a gallery of articles and are able to navigate to that article's page on the New York Times website if interested. Users can also filter the gallery by section, corresponding to the different sections of the NYT.
 
-You will create a news reader application that pulls articles from the New York Times API Top Stories API.
+## Snapshots of Application
 
-### Requirements:
-
-At a minimum, you must show:
-
-- A list of articles
-
-- A “detailed” view for each article (as opposed to summary/list view)
-
-- Articles in the list must link to the detailed article view you create
-
-- Some sort of search, filter, OR sort
-
-Beyond the base requirements, include any additional elements you’d like, just be mindful of your time. You don’t need to go overboard, just consider what might be necessary to achieve MVP so that this news feed is easy-to-use, information is clear, and navigation is painless. Put yourself in a user’s shoes and think about what you would need (or want). The app should be usable on desktop, tablet, and mobile devices.
-
-### Things we’ll be looking for:
-
-- A strong understanding of React JS and Front-End best practices
-
-- Your ability to prioritize for MVP
-
-- An understanding of basic usability practices and standards
-
-- A clear hierarchy of information
-
-- Clean, well thought out code
-
-Try to limit your total time to around __8 hours__ on this project. Prioritize what is important to get this feed working and as close to MVP as possible. Please do not attempt to recreate NYTimes.com. We’re interested in seeing your ability to write clean code to solve a problem with an understanding of basic UX. We’re not looking for fancy UI tricks or hacks.
+Landing page
 
 
-_[Project spec](https://mod4.turing.edu/projects/take_home/take_home_fe) provided by [Turing School of Software & Design](https://turing.edu/)._
+
+
+Modal w/ detail view & link to NYT
+
+<img width="319" alt="Screen Shot 2022-01-14 at 2 22 23 PM" src="https://user-images.githubusercontent.com/79823098/149592920-fd4de464-5998-4e7d-b16e-a9b1c52a7c0c.png">
+
+
+## Technologies
+
+### Front End
+
+![React (Context API, Hooks)](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+
+## Wins
+
+- Although it wasn't required, my self-directed goal for this challenge was to see how quickly I could throw together a front-end codebase with TypeScript, and gladly I found that the workflow of updating state, interfaces, props, etc. as needed was fairly effortless.
+
+## Challenges
+
+- Sophisticated UI beyond basic usability was not a focus of this challenge, but in hindsight I wish I had taken the opportunity to try out a new UI component library.
+
+## Viewing & Installation
+
+The deployed app can be viewed [here](https://ny-times-news-reader.surge.sh/).
+
+If you'd like to run this repo locally:
+
+1. Clone down this repository
+2. In your terminal, run:
+  ```
+  npm install
+  npm start
+  ```
+3. If you're not automatically navigated to `localhost:3000` from your terminal, visit it in your browser
+
+## Future Features
+
+- Re-style with a component library
+- Aggregate search
+
+## Contributors
+
+- [Nolan Caine](https://github.com/n0land0)
+
+## Project Spec
+- [Project Spec](https://mod4.turing.edu/projects/take_home/take_home_fe) provided by [Turing School of Software & Design](https://turing.edu/)
