@@ -4,7 +4,9 @@ The deployed app can be viewed [here](https://ny-times-news-reader.surge.sh/).
 
 ## Abstract
 
-This app was built as part of a [timed (8 hrs) practice take-home challenge](https://mod4.turing.edu/projects/take_home/take_home_fe) issued by [Turing School of Software & Design](https://turing.edu/), using the [NYT Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview). Users are greeted with a gallery of articles and are able to navigate to that article's page on the New York Times website if interested. Users can also filter the gallery by section, corresponding to the different sections of the NYT.
+This app was built as part of a [timed (8 hrs) practice take-home challenge](https://mod4.turing.edu/projects/take_home/take_home_fe) issued by [Turing School of Software & Design](https://turing.edu/), using the [NYT Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview). 
+
+Users are greeted with a gallery of articles and are able to navigate to that article's page on the New York Times website if interested. Users can also filter the gallery by section, corresponding to the different sections of the NYT.
 
 ## Snapshots of Application
 
