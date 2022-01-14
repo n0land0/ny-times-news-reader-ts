@@ -1,21 +1,19 @@
-import React, { useState, useEffect, useContext } from 'react';
-import ReactModal from 'react-modal';
+import React, { useContext } from 'react';
+import ReactModal, { Styles, setAppElement } from 'react-modal';
 import dayjs from 'dayjs';
 
 import { Context } from '../context/Context';
 import closeIcon from '../assets/img_143760.png';
 import arrowIcon from '../assets/arrow.png';
 
-ReactModal.setAppElement('#root');
+setAppElement('#root');
 
-const inlineStyles: ReactModal.Styles = {
-  overlay: {
-
-  },
+const inlineStyles: Styles = {
+  overlay: {},
   content: {
     textAlign: 'center'
   }
-}
+};
 
 const Detail = () => {
   const { selectedArticle, modalIsOpen, hideDetailView } = useContext(Context);
