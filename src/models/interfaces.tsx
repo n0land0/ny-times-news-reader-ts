@@ -6,12 +6,8 @@ export interface IContextValue {
   displayList: IArticle[];
   selectedArticle: IArticle | null;
   modalIsOpen: boolean;
-  showDetailView: (event: React.MouseEvent, props: IArticle) => void;
+  showDetailView: (props: IArticle) => void;
   hideDetailView: () => void;
-  filterTags: string[];
-  setFilterTags: Dispatch<SetStateAction<string[]>>;
-  addFilterTag: (tagToAdd: string) => void;
-  removeFilterTag: (tagToRemove: string) => void;
 }
 
 interface IMultimedia {
