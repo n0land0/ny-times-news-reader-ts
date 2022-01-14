@@ -1,3 +1,5 @@
+The deployed app can be viewed [here](https://ny-times-news-reader.surge.sh/).
+
 # Take-Home Front End Prompt
 
 ## NY Times News Reader
@@ -31,3 +33,6 @@ Beyond the base requirements, include any additional elements you’d like, just
 - Clean, well thought out code
 
 Try to limit your total time to around __8 hours__ on this project. Prioritize what is important to get this feed working and as close to MVP as possible. Please do not attempt to recreate NYTimes.com. We’re interested in seeing your ability to write clean code to solve a problem with an understanding of basic UX. We’re not looking for fancy UI tricks or hacks.
+
+
+_[Project spec](https://mod4.turing.edu/projects/take_home/take_home_fe) provided by [Turing School of Software & Design](https://turing.edu/)._
